@@ -59,13 +59,10 @@ class App extends Component {
     }
     return (
       <div className="App">
-        {/* <Button onClick={this.getPeople} variant="contained" style={{'marginBottom': "16px"}}>
-          Refresh
-        </Button> */}
         <AppBar style={{position: "inherit", minHeight: "48px", backgroundColor: "#404040"}}>
-          <Typography variant="h6" style= {{ marginTop: "8px"}} >DU AWS</Typography>
+          <Typography variant="h3" style= {{ marginTop: "8px"}} >DU AWS</Typography>
         </AppBar>
-        <Card style={{width: "560px", margin: "auto", marginTop: "20px" }}>
+        <Card style={{width: "1080px", margin: "auto", marginTop: "20px" }}>
          { table }
         </Card>
       </div>

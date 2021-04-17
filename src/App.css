@@ -30,8 +30,12 @@
   color: #61dafb;
 }
 
-.person-table {
-  max-width: 560px;
+td, th {
+  font-size: larger !important
+}
+
+th {
+  font-weight: 800 !important;
 }
 
 @keyframes App-logo-spin {
