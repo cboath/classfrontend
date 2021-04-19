@@ -8,8 +8,8 @@ phases:
     commands:
       - echo Running npm install
       - npm install
-      - echo Running tests
-      - npm run test
+      # - echo Running tests
+      # - npm run test
   build:
     commands:
       - echo Build started on `date`
