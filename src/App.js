@@ -18,7 +18,7 @@ class App extends Component {
   async getPeople() {
     const self = this;
     self.setState({loading:true})
-    const response = await axios.get(`https://wqt7zhsg4h.execute-api.us-east-1.amazonaws.com/NonProd/students`)
+    const response = await axios.get(`https://38bpl6uik6.execute-api.us-east-1.amazonaws.com/NonProd/students`)
     self.setState({persons: response.data.Items, loading:false})
   }
 
