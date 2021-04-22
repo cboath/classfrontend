@@ -60,7 +60,7 @@ class App extends Component {
     return (
       <div className="App">
         <AppBar style={{position: "inherit", minHeight: "48px", backgroundColor: "#404040"}}>
-          <Typography variant="h3" style= {{ marginTop: "8px"}} >DU AWS</Typography>
+          <Typography variant="h3" style= {{ marginTop: "8px"}} >Teater</Typography>
         </AppBar>
         <Card style={{width: "1080px", margin: "auto", marginTop: "20px" }}>
          { table }
