@@ -8,7 +8,7 @@ import React,  { Component } from 'react';
 class App extends Component {
   constructor() {
     super();
-    this.state = { positions: [], loading: false };
+    this.state = { persons: [], loading: false };
   }
 
   componentDidMount() {
@@ -18,9 +18,8 @@ class App extends Component {
   async getPeople() {
     const self = this;
     self.setState({loading:true})
-    const response = await axios.get(`https://mm23oahxk4.execute-api.us-east-1.amazonaws.com/NonProd/positions`)
-    console.log('HERE IT BE: ', response)
-    self.setState({positions: response.data, loading:false})
+    const response = await axios.get(`https://38bpl6uik6.execute-api.us-east-1.amazonaws.com/NonProd/students`)
+    self.setState({persons: response.data.Items, loading:false})
   }
 
   render() {
@@ -47,12 +46,12 @@ class App extends Component {
           </TableRow>
         </TableHead>
         <TableBody>
-          { this.state.positions.map((stock) => (
-          <TableRow key={stock[0]}>
-            <TableCell>{stock[0]}</TableCell>
-            <TableCell>{stock[1]}</TableCell>
-            <TableCell>{"Hi"}</TableCell>
-            <TableCell>{"Also Hi"}</TableCell>
+          { this.state.persons.map((student) => (
+          <TableRow key={student.EmployeeId.N}>
+            <TableCell>{student.EmployeeId.N}</TableCell>
+            <TableCell>{student.Fname.S}</TableCell>
+            <TableCell>{student.LName.S}</TableCell>
+            <TableCell>{student.LOS.S}</TableCell>
           </TableRow>
           ))}
         </TableBody>
